@@ -19,30 +19,20 @@
             <img id="countryFlag" alt="Country Flag" style="width: 100px; height: 60px;">
             <p id="temperature"></p>
             <p id="description"></p>
-            <img id="weatherIcon" alt="Weather Icon" style="width: 100px; height: 100px;" />
+            <img id="weatherIcon" alt="Weather Icon" style="width: 100px; height: 100px;">
             <ul id="additionalInfo" class="info-list">
-                <li>
-                    <i class="fas fa-cloud icon"></i>
-                    Clouds: <span id="clouds">--</span>
-                </li>
-                <li>
-                    <i class="fas fa-tint icon"></i>
-                    Humidity: <span id="humidity">--</span>
-                </li>
-                <li>
-                    <i class="fas fa-tachometer-alt icon"></i>
-                    Pressure: <span id="pressure">--</span>
-                </li>
+                <li><i class="fas fa-cloud"></i> Clouds: <span id="clouds">--</span></li>
+                <li><i class="fas fa-tint"></i> Humidity: <span id="humidity">--</span></li>
+                <li><i class="fas fa-tachometer-alt"></i> Pressure: <span id="pressure">--</span></li>
             </ul>
         </div>
 
-        <div class="weather-chart">
-            <canvas id="weatherChart" width="400" height="200"></canvas>
-        </div>        
+        <div class="daily-forecast">
+            <h3>5-Day Forecast</h3>
+            <div id="forecast"></div>
+        </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
-
