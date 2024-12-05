@@ -6,19 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <h1>Weather App</h1>
         <input type="text" id="locationInput" placeholder="Enter a city">
         <button id="searchButton">Search</button>
+
         <div class="weather-info">
             <h2 id="location"></h2>
+            <img id="countryFlag" alt="Country Flag" style="width: 100px; height: 60px;">
             <p id="temperature"></p>
             <p id="description"></p>
+            <img id="weatherIcon" alt="Weather Icon" style="width: 100px; height: 100px;" />
+            <ul id="additionalInfo" class="info-list">
+                <li>
+                    <i class="fas fa-cloud icon"></i>
+                    Clouds: <span id="clouds">--</span>
+                </li>
+                <li>
+                    <i class="fas fa-tint icon"></i>
+                    Humidity: <span id="humidity">--</span>
+                </li>
+                <li>
+                    <i class="fas fa-tachometer-alt icon"></i>
+                    Pressure: <span id="pressure">--</span>
+                </li>
+            </ul>
         </div>
+
+        <div class="weather-chart">
+            <canvas id="weatherChart" width="400" height="200"></canvas>
+        </div>        
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
+
